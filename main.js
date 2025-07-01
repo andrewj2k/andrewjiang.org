@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const roles = document.getElementById('roles');
-  const words = ['a maker', 'a developer', 'an analyst', 'studying CS at Cornell'];
+  const words = [' a maker', ' a developer', ' a leader', ' a designer', ' a creator',' a Cornell student'];
   let i = 0;
   let j = 0;
   let isDeleting = false;
