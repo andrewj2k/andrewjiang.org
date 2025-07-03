@@ -17,8 +17,7 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Me</a></li>
-                <li><a href="#">Personal Work</a></li>
-                <li><a href="#">Teams</a></li>
+                <li><a href="#">My Work</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -43,7 +42,7 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">Bio</h1>
-                <p class="about-text">Maker. Dev. Leader. I've worn many hats. <br>I'm a rising sophomore at Cornell University studying 
+                <p class="about-text">Maker. Dev. Leader. I've worn <span2>many</span2> hats. <br>I'm a rising sophomore at Cornell University studying 
                     CS, Operations Research, & AI. <br>My work specializes in practical intelligent automation in robotics, health, & finance.
                 </p>
                 <p class="about-text">Previously: I placed top 15 at a national chess championship, graduated MIT's Fab Academy in HS, engineered a custom drone, and cofounded a $75k+ funded robotics NPO.
@@ -56,14 +55,79 @@
                     to optimize trading (coming soon).
                 </p>
                 <p class="about-text">This website serves to document my work. See more on my <a href="docs/Andrew_Jiang_Resume.pdf">resume</a> or my <a href="https://github.com/andrewj2k">github</a>.
-                    <br>Reach out! Shoot me an email at <span>andrewj2k@gmail.com</span>.
+                    <br>Reach out! Shoot me an email at <span2>andrewj2k@gmail.com</span2>.
                 </p>
-                <div class="tab-titles"></div>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Digital Fabrication</span><br>Rapid prototyping with CAD/CAM & PCBs</li>
+                        <li><span>AI Application</span><br>Drones, control logic, embedded devices</li>
+                        <li><span>Leadership</span><br>Technical, Organizational, & Financial</li>
+                        <li><span>Softwares</span><br>Python, Java, C++, SQL, Excel</li>
+                        <li><span>Quant Analysis</span><br>Time series modeling, forecasting, regression, DCF/Comps</li>
+                    </ul>
+                </div>
+                 <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>July 2025 - Present</span><br>PE Intern at Ridgeview Holdings</li>
+                        <li><span>May 2025 - Present</span><br>SWE Intern at Amwins</li>
+                        <li><span>Nov 2024 - Present</span><br>ECE Engineer at CUAD</li>
+                        <li><span>Aug 2024 - Aug 2025</span><br>Computer Engineer Intern at Enventys Partners</li>
+                        <li><span>Jan 2020 - Aug 2024</span><br>Cofounder & CTO at Techies Robotics</li>
+                    </ul>
+                </div>
+                 <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Aug 2024 - Present</span><br>CS with OR/AI at Cornell University</li>
+                        <li><span>Jan 2022 - Jun 2023</span><br>Fabrication Diploma at MIT's Fab Academy</li>
+                        <li><span>Aug 2020 - May 2024</span><br>High School at Charlotte Latin School</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
     </div>
 </div>
+<!-- ------------Portfolio -->
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+            </div>
+        </div>
+    </div>
+
+ </div>
 <script src="main.js"></script>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+
+</script>
 </body>
 </html>
